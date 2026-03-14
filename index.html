@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Movie Recommendation</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>🎬 Movie Recommendation</h1>
+
+<input type="text" id="search" placeholder="Search movie...">
+
+<button onclick="searchMovie()">Search</button>
+
+<div id="movies"></div>
+
+<div id="movieDetail" class="modal">
+
+<div class="modal-content">
+
+<span onclick="closeMovie()" class="close">X</span>
+
+<h2 id="detailTitle"></h2>
+
+<img id="detailPoster">
+
+<p id="detailOverview"></p>
+
+<div id="trailer"></div>
+
+<h3>Similar Movies</h3>
+<div id="similar"></div>
+
+</div>
+
+</div>
+<script src="script.js"></script>
+
+<h2>⭐ Favorite Movies</h2>
+<div id="favorites"></div>
+
+</body>
+
+</html>
+
