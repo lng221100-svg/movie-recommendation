@@ -25,33 +25,7 @@ movies.forEach(movie => {
 if(!movie.poster_path) return;
 
 container.innerHTML += `
-.movieOverlay{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.6);
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-opacity:0;
-transition:0.3s;
-
-}
-
-.movie:hover .movieOverlay{
-
-opacity:1;
-
-}
+<div class="movie">
 
 <div class="posterBox">
 
@@ -96,10 +70,11 @@ document.getElementById("detailPoster").src =
 document.getElementById("detailOverview").innerText =
 movie.overview;
 
-loadTrailer(id);
-loadSimilar(id);
 document.getElementById("similar").innerHTML="";
 document.getElementById("trailer").innerHTML="";
+
+loadTrailer(id);
+loadSimilar(id);
 
 }
 async function loadTrailer(id){
